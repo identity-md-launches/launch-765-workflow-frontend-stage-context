@@ -12,7 +12,13 @@ import {
   zeroAddress,
   type Address,
 } from "viem";
-import { poolType, protocolAbi, type Provider, type Runtime } from "./config";
+import {
+  distributor,
+  poolType,
+  protocolAbi,
+  type Provider,
+  type Runtime,
+} from "./config";
 export const short = (v: string) => `${v.slice(0, 6)}…${v.slice(-4)}`;
 export function amount(value: string, decimals = 18, allowZero = false) {
   if (
@@ -29,6 +35,44 @@ export function display(n: bigint, decimals = 18) {
   return Number(formatUnits(n, decimals)).toLocaleString("en-US", {
     maximumSignificantDigits: 8,
   });
+}
+export function payrollAmount(n: bigint) {
+  const [whole, fraction] = formatUnits(n, 18).split(".");
+  return (
+    whole.replace(/\B(?=(\d{3})+(?!\d))/g, ",") +
+    (fraction ? `.${fraction}` : "")
+  );
+}
+export function quoteErrorText(e: unknown, sell: boolean) {
+  if (e instanceof BaseError) {
+    let revert = e.walk(
+      (cause) => cause instanceof ContractFunctionRevertedError,
+    );
+    // V4Quoter wraps failed pool simulations; decode the underlying reason.
+    for (
+      let depth = 0;
+      depth < 4 && revert instanceof ContractFunctionRevertedError;
+      depth++
+    ) {
+      if (revert.data?.errorName !== "UnexpectedRevertBytes") break;
+      const data = revert.data.args?.[0];
+      if (typeof data !== "string" || !data.startsWith("0x")) break;
+      revert = new ContractFunctionRevertedError({
+        abi: protocolAbi.quoter,
+        data: data as `0x${string}`,
+        functionName: "quoteExactInputSingle",
+      });
+    }
+    if (revert instanceof ContractFunctionRevertedError) {
+      if (sell && revert.data?.errorName === "NotEnoughLiquidity")
+        return "Nobody has bought yet, so the pool has no ETH to pay sellers.";
+      return (
+        revert.reason ||
+        [revert.shortMessage, ...(revert.metaMessages ?? [])].join("\n")
+      );
+    }
+  }
+  return errorText(e);
 }
 export function errorText(e: unknown) {
   const raw = e instanceof Error ? e.message : String(e);
@@ -140,6 +184,7 @@ export async function readState(r: Runtime, account?: Address) {
     slot,
     liquidity,
     balance,
+    distributorBalance,
     nativeBalance,
     block,
   ] = await Promise.all([
@@ -160,6 +205,7 @@ export async function readState(r: Runtime, account?: Address) {
       args: [poolId(r)],
     }),
     account ? read("balanceOf", [account]) : 0n,
+    read("balanceOf", [distributor]),
     account ? r.client.getBalance({ address: account }) : 0n,
     r.client.getBlockNumber(),
   ]);
@@ -184,6 +230,7 @@ export async function readState(r: Runtime, account?: Address) {
     decimals: Number(decimals),
     supply: supply as bigint,
     balance: balance as bigint,
+    distributorBalance: distributorBalance as bigint,
     nativeBalance,
     price,
     liquidity,

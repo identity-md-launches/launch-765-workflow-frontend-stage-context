@@ -1,5 +1,24 @@
 # Dev Is A Robot — NODEV
 
+The static website is delivered in `dist/`, with React/TypeScript source and the unchanged dependency lockfile under `web/`.
+
+## Website: install, preview and rebuild
+
+```sh
+cd web
+npm ci
+npm run build
+npm run preview -- --port 4173
+```
+
+Open `http://localhost:4173/`. The build includes the TypeScript check and regenerates the relative-URL export plus verified ABI/asset manifest. Keep the pinned source history available for ABI verification. For validation, run `npm test`, `npm run verify`, and `NODEV_MAINNET=1 npm test -- mainnet.spec.ts` (install Chromium with `npx playwright install chromium`).
+
+To publish, upload the complete contents of `dist/` to static hosting or pin that directory to IPFS, then update the existing `nodev.site.identitymd.eth` name through its authorized publishing workflow. The publisher serves the export directly; it does not rebuild. See [frontend instructions](web/README.md), [design](DESIGN.md) and [validation](docs/VALIDATION.md).
+
+This update removes the zero-active-liquidity swap gate and adds the live Dev Payroll panel. Build, typecheck, export checks and 26 browser interaction tests passed. Both supplied mainnet RPCs returned 9,859.085587022901712057 NODEV for 0.0001 ETH and successfully simulated the swap. No transaction was broadcast or site published. `.git/` is protected by this assignment, so files are prepared for contributor collection without a worker commit.
+
+## Contract reference
+
 This is the contract-stage implementation of the approved **Dev Is A Robot** launch. The only deployable project contract is `src/LaunchToken.sol:LaunchToken`. It is a plain ERC-20 built on the vendored OpenZeppelin Contracts v5.0.2 implementation.
 
 | Property | Fixed value |

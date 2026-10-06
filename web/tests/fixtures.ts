@@ -10,7 +10,7 @@ import {
 import handoff from "../config/handoff.json" with { type: "json" };
 import network from "../config/network.json" with { type: "json" };
 import tokenAbi from "../../docs/abi/LaunchToken.json" with { type: "json" };
-import { protocolAbi } from "../src/config";
+import { distributor, protocolAbi } from "../src/config";
 export const account = "0x1111111111111111111111111111111111111111";
 export const other = "0x2222222222222222222222222222222222222222";
 const token = handoff.contracts[0].address.toLowerCase();
@@ -28,12 +28,15 @@ export type FixtureOptions = {
   quoteDelay?: number;
   failFirstRpc?: boolean;
   receiptUnavailable?: boolean;
+  quoteRevert?: `0x${string}`;
+  zeroQuote?: boolean;
 };
 export async function setup(page: Page, options: FixtureOptions = {}) {
   const state = {
     tokenAllowance: 0n,
     permitAllowance: 0n,
     permitExpiration: 0,
+    distributorBalance: parseUnits("100000000", 18),
     sends: [] as any[],
     calls: [] as any[],
     receipts: 0,
@@ -160,7 +163,10 @@ export async function setup(page: Page, options: FixtureOptions = {}) {
             result = parseUnits("1000000000", 18);
             break;
           case "balanceOf":
-            result = parseUnits("1000", 18);
+            result =
+              String(decoded.args![0]).toLowerCase() === distributor
+                ? state.distributorBalance
+                : parseUnits("1000", 18);
             break;
           case "getSlot0":
             result = [2n ** 96n * 10000n, 184216, 0, 12500];
@@ -175,14 +181,26 @@ export async function setup(page: Page, options: FixtureOptions = {}) {
                 : [state.permitAllowance, state.permitExpiration, 0];
             break;
           case "quoteExactInputSingle":
+            if (options.quoteRevert)
+              return {
+                jsonrpc: "2.0",
+                id: body.id,
+                error: {
+                  code: 3,
+                  message: "execution reverted",
+                  data: options.quoteRevert,
+                },
+              };
             if (options.quoteDelay)
               await new Promise((resolve) =>
                 setTimeout(resolve, options.quoteDelay),
               );
             result = [
-              (decoded.args![0] as any).zeroForOne
-                ? parseUnits("100", 18)
-                : parseUnits("0.00000001", 18),
+              options.zeroQuote
+                ? 0n
+                : (decoded.args![0] as any).zeroForOne
+                  ? parseUnits("100", 18)
+                  : parseUnits("0.00000001", 18),
               160000n,
             ];
             break;

@@ -495,6 +495,19 @@ header {
   font-size: 0.625rem;
   color: var(--muted);
 }
+.payroll dl > div {
+  flex-wrap: wrap;
+  gap: 4px 12px;
+}
+.payroll dd {
+  margin-inline-start: auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+}
+.payroll .caption + .caption {
+  margin-top: 12px;
+}
 .diagnostic-bottom span:last-child {
   color: var(--accent);
 }

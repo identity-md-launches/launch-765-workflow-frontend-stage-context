@@ -1,0 +1,14 @@
+[
+  {
+    "mode": "CSS zoom 200%",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "overflow": false
+  },
+  {
+    "mode": "RTL mirror",
+    "viewport": 1440,
+    "scrollWidth": 1440,
+    "overflow": false
+  }
+]

@@ -12,14 +12,14 @@ transforming...
 rendering chunks...
 computing gzip size...
 ../dist/index.html                   1.05 kB │ gzip:   0.55 kB
-../dist/assets/index-3d17LH72.css   13.13 kB │ gzip:   3.53 kB
-../dist/assets/ccip-CjYyXUdY.js      2.83 kB │ gzip:   1.30 kB
-../dist/assets/index-wag7NrC2.js   537.77 kB │ gzip: 164.43 kB
+../dist/assets/index-Doiqz4ID.css   13.32 kB │ gzip:   3.57 kB
+../dist/assets/ccip-DbXiZLkx.js      2.83 kB │ gzip:   1.30 kB
+../dist/assets/index-Bdm9NA6L.js   539.47 kB │ gzip: 164.96 kB
 
 [plugin builtin:vite-reporter] 
 (!) Some chunks are larger than 500 kB after minification. Consider:
 - Using dynamic import() to code-split the application
 - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
-✓ built in 265ms
-Exported 6 assets, 560742 bytes; pinned ABI, handoff, network and SHA-256 inventory match.
+✓ built in 474ms
+Exported 6 assets, 562630 bytes; pinned ABI, handoff, network and SHA-256 inventory match.

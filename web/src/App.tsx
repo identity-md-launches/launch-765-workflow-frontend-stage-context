@@ -1,9 +1,15 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { formatUnits, getAddress, type Address, type Hex } from "viem";
-import { loadDeployment, type Provider, type Runtime } from "./config";
+import {
+  devSalary,
+  loadDeployment,
+  type Provider,
+  type Runtime,
+} from "./config";
 import {
   assertWallet,
   errorText,
+  payrollAmount,
   readState,
   short,
   switchChain,
@@ -575,6 +581,44 @@ function Terminal({ r }: { r: Runtime }) {
                   <span>OWNER PRIVILEGES</span>
                   <span>[ NONE DETECTED ]</span>
                 </div>
+              </section>
+              <section
+                className="panel diagnostics payroll"
+                aria-labelledby="payroll-title"
+              >
+                <div className="panel-title">
+                  <h2 id="payroll-title">Dev Payroll</h2>
+                </div>
+                <dl aria-live="polite">
+                  <div>
+                    <dt>Dev salary:</dt>
+                    <dd>100,000,000 NODEV</dd>
+                  </div>
+                  <div>
+                    <dt>Collected:</dt>
+                    <dd>
+                      {state
+                        ? `${payrollAmount(devSalary - state.distributorBalance)} NODEV`
+                        : "Awaiting RPC"}
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Still unclaimed:</dt>
+                    <dd>
+                      {state
+                        ? `${payrollAmount(state.distributorBalance)} NODEV`
+                        : "Awaiting RPC"}
+                    </dd>
+                  </div>
+                </dl>
+                <p className="caption">
+                  The dev is 600 robots. Most of them haven't picked up their
+                  paycheck.
+                </p>
+                <p className="caption">
+                  Ran an IMD seat during launch 761? Your NODEV is waiting in
+                  the distributor.
+                </p>
               </section>
               <ThoughtLog />
             </div>

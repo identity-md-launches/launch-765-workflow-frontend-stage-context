@@ -64,6 +64,10 @@ declare global {
 }
 export const poolType =
   "(address currency0,address currency1,uint24 fee,int24 tickSpacing,address hooks)";
+// Launch 761 distributor, supplied explicitly by this task and its project record.
+export const distributor: Address =
+  "0xea080d2cd1e8fc94a971a19707d08888799e0d01";
+export const devSalary = 100_000_000n * 10n ** 18n;
 export const protocolAbi = {
   state: parseAbi([
     "function getSlot0(bytes32 poolId) view returns (uint160 sqrtPriceX96, int24 tick, uint24 protocolFee, uint24 lpFee)",
@@ -71,6 +75,11 @@ export const protocolAbi = {
   ]),
   quoter: parseAbi([
     `function quoteExactInputSingle((${poolType} poolKey,bool zeroForOne,uint128 exactAmount,bytes hookData) params) returns (uint256 amountOut,uint256 gasEstimate)`,
+    "error NotEnoughLiquidity(bytes32 poolId)",
+    "error UnexpectedRevertBytes(bytes revertData)",
+    "error NotSelf()",
+    "error NotPoolManager()",
+    "error UnexpectedCallSuccess()",
   ]),
   router: parseAbi([
     "function execute(bytes commands,bytes[] inputs,uint256 deadline) payable",

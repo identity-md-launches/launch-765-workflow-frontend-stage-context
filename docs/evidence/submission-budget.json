@@ -1,12 +1,14 @@
 {
-  "newDeliveryFileCount": 49,
-  "newDeliveryRawBytes": 1773519,
-  "entireTrackedAndProposedRawBytes": 2687901,
-  "deliveryBudgetWith1KiBPerFileOverhead": 2789277,
+  "checkedAt": "2026-10-06T03:22:40.310740+00:00",
   "limitBytes": 8388608,
-  "outOfScopePaths": [],
-  "dependencyCacheArchivePaths": [],
-  "submodules": 0,
-  "gitCommit": "blocked: repository .git is read-only",
-  "actualGitBundle": "not generated: partial-clone objects would need writes to protected .git"
+  "currentFileCount": 109,
+  "currentRawFileBytes": 2823289,
+  "conservativeContentBudgetBytes": 3067001,
+  "reserveDescription": "16 KiB for audit reports plus 2 KiB metadata per file",
+  "contentZipBytes": 1362507,
+  "exportBytes": 565660,
+  "dependencyOrCacheDirectoriesIncluded": false,
+  "submodules": false,
+  "gitCommitOrHistoryBundleCreated": false,
+  "note": "Content-only audit. No Git metadata was mutated. A complete history bundle was not generated; final contributor bundling is external."
 }

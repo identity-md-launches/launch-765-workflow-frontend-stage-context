@@ -2,29 +2,40 @@
 > nodev-terminal@1.0.0 test
 > playwright test
 
-[WebServer] (node:143) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (node:42) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:71) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 [WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
 
-Running 17 tests using 1 worker
+Running 26 tests using 1 worker
 
-(node:155) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:83) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-  ✓   1 tests/terminal.spec.ts:18:1 › disconnected, copy, log controls, keyboard action and no-wallet error (716ms)
-  ✓   2 tests/terminal.spec.ts:50:1 › wrong network offers add-chain after 4902 then reconnects reads (568ms)
-  ✓   3 tests/terminal.spec.ts:80:1 › rejected connection and transaction are recoverable (340ms)
-  ✓   4 tests/terminal.spec.ts:93:1 › ETH buy uses exact handoff key, minimum output, native value and simulation before signing (1.9s)
-  ✓   5 tests/terminal.spec.ts:136:1 › NODEV sell confirms each finite approval and then swaps with zero ETH value (1.2s)
-  ✓   6 tests/terminal.spec.ts:175:1 › slippage, precision, insufficient balance, stale quote and simulation revert (1.7s)
-  ✓   7 tests/terminal.spec.ts:207:1 › wallet rejection resets pending, and changed account discards in-flight quote (3.2s)
-  ✓   8 tests/terminal.spec.ts:229:1 › contract tools: validate recipient, transfer, approve/revoke and transferFrom (1.2s)
-  ✓   9 tests/terminal.spec.ts:284:3 › failRpc blocks swapping and exposes recovery (1.7s)
-  ✓  10 tests/terminal.spec.ts:284:3 › noCode blocks swapping and exposes recovery (297ms)
-  ✓  11 tests/terminal.spec.ts:284:3 › noLiquidity blocks swapping and exposes recovery (404ms)
-  ✓  12 tests/terminal.spec.ts:300:1 › configured RPC fallback works (366ms)
-  ✓  13 tests/terminal.spec.ts:305:1 › ABI tampering fails closed (187ms)
-  ✓  14 tests/terminal.spec.ts:317:1 › responsive layout, reduced motion, keyboard focus and automated accessibility (1.5s)
-  ✓  15 tests/terminal.spec.ts:377:1 › static export resolves every resource from a gateway subpath without rewrites (359ms)
-  ✓  16 tests/terminal.spec.ts:398:1 › unconfirmed submission remains locked until receipt recovery succeeds (768ms)
-  ✓  17 tests/terminal.spec.ts:424:1 › amount parsing and extended router encoding preserve limits and handoff key (8ms)
+  ✓   1 tests/payroll-swap.spec.ts:18:1 › zero active liquidity still permits a quoted buy and simulated swap (1.8s)
+  ✓   2 tests/payroll-swap.spec.ts:95:3 › direct sell liquidity failure (943ms)
+  ✓   3 tests/payroll-swap.spec.ts:95:3 › wrapped sell liquidity failure (853ms)
+  ✓   4 tests/payroll-swap.spec.ts:95:3 › buy liquidity failure retains actual reason (839ms)
+  ✓   5 tests/payroll-swap.spec.ts:95:3 › other custom failure retains reason (880ms)
+  ✓   6 tests/payroll-swap.spec.ts:95:3 › string revert retains reason (920ms)
+  ✓   7 tests/payroll-swap.spec.ts:95:3 › empty string revert still reports failure (846ms)
+  ✓   8 tests/payroll-swap.spec.ts:95:3 › unknown revert retains selector (992ms)
+  ✓   9 tests/payroll-swap.spec.ts:120:1 › zero output from Quoter cannot enable a swap (763ms)
+  ✓  10 tests/payroll-swap.spec.ts:133:1 › payroll reads distributor while disconnected, refreshes exactly and recovers after RPC failure (2.3s)
+  ✓  11 tests/terminal.spec.ts:18:1 › disconnected, copy, log controls, keyboard action and no-wallet error (909ms)
+  ✓  12 tests/terminal.spec.ts:50:1 › wrong network offers add-chain after 4902 then reconnects reads (1.1s)
+  ✓  13 tests/terminal.spec.ts:80:1 › rejected connection and transaction are recoverable (545ms)
+  ✓  14 tests/terminal.spec.ts:93:1 › ETH buy uses exact handoff key, minimum output, native value and simulation before signing (2.3s)
+  ✓  15 tests/terminal.spec.ts:136:1 › NODEV sell confirms each finite approval and then swaps with zero ETH value (2.3s)
+  ✓  16 tests/terminal.spec.ts:175:1 › slippage, precision, insufficient balance, stale quote and simulation revert (2.8s)
+  ✓  17 tests/terminal.spec.ts:207:1 › wallet rejection resets pending, and changed account discards in-flight quote (3.6s)
+  ✓  18 tests/terminal.spec.ts:229:1 › contract tools: validate recipient, transfer, approve/revoke and transferFrom (2.2s)
+  ✓  19 tests/terminal.spec.ts:284:3 › failRpc blocks swapping and exposes recovery (1.9s)
+  ✓  20 tests/terminal.spec.ts:284:3 › noCode blocks swapping and exposes recovery (519ms)
+  ✓  21 tests/terminal.spec.ts:295:1 › configured RPC fallback works (753ms)
+  ✓  22 tests/terminal.spec.ts:300:1 › ABI tampering fails closed (352ms)
+  ✓  23 tests/terminal.spec.ts:312:1 › responsive layout, reduced motion, keyboard focus and automated accessibility (2.7s)
+  ✓  24 tests/terminal.spec.ts:372:1 › static export resolves every resource from a gateway subpath without rewrites (588ms)
+  ✓  25 tests/terminal.spec.ts:393:1 › unconfirmed submission remains locked until receipt recovery succeeds (1.2s)
+  ✓  26 tests/terminal.spec.ts:419:1 › amount parsing and extended router encoding preserve limits and handoff key (17ms)
 
-  17 passed (18.2s)
+  26 passed (39.8s)

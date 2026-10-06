@@ -1,12 +1,12 @@
 {
   "config": {
     "argv": [
-      "/usr/local/bin/node",
-      "/root/.identitymd/work/c9d2f1b6-58c5-490b-86e0-07eadcf989b6/664a3c6d-b5c2-4f63-9291-a860e90b8181/web/node_modules/.bin/playwright",
+      "/home/worker/.nvm/versions/node/v24.21.0/bin/node",
+      "/tmp/nodev-check/web/node_modules/.bin/playwright",
       "test"
     ],
-    "configFile": "/root/.identitymd/work/c9d2f1b6-58c5-490b-86e0-07eadcf989b6/664a3c6d-b5c2-4f63-9291-a860e90b8181/web/playwright.config.ts",
-    "rootDir": "/root/.identitymd/work/c9d2f1b6-58c5-490b-86e0-07eadcf989b6/664a3c6d-b5c2-4f63-9291-a860e90b8181/web/tests",
+    "configFile": "/tmp/nodev-check/web/playwright.config.ts",
+    "rootDir": "/tmp/nodev-check/web/tests",
     "failOnFlakyTests": false,
     "forbidOnly": false,
     "fullyParallel": false,
@@ -22,7 +22,7 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "/root/.identitymd/work/c9d2f1b6-58c5-490b-86e0-07eadcf989b6/664a3c6d-b5c2-4f63-9291-a860e90b8181/web/test-results",
+        "outputDir": "/tmp/nodev-check/web/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -30,7 +30,7 @@
         },
         "id": "",
         "name": "",
-        "testDir": "/root/.identitymd/work/c9d2f1b6-58c5-490b-86e0-07eadcf989b6/664a3c6d-b5c2-4f63-9291-a860e90b8181/web/tests",
+        "testDir": "/tmp/nodev-check/web/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -65,6 +65,354 @@
   },
   "suites": [
     {
+      "title": "payroll-swap.spec.ts",
+      "file": "payroll-swap.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "zero active liquidity still permits a quoted buy and simulated swap",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 40000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1790,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T03:21:33.319Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "be1d78b10a5589d89716-d452a6aaaeda27fbb766",
+          "file": "payroll-swap.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "direct sell liquidity failure",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 40000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 943,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T03:21:35.762Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "be1d78b10a5589d89716-b1a4ceee2a2c57f6c906",
+          "file": "payroll-swap.spec.ts",
+          "line": 95,
+          "column": 3
+        },
+        {
+          "title": "wrapped sell liquidity failure",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 40000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 853,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T03:21:36.727Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "be1d78b10a5589d89716-8177e10832e2cbba57a8",
+          "file": "payroll-swap.spec.ts",
+          "line": 95,
+          "column": 3
+        },
+        {
+          "title": "buy liquidity failure retains actual reason",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 40000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 839,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T03:21:37.608Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "be1d78b10a5589d89716-ed717b86b70b9d0b73c4",
+          "file": "payroll-swap.spec.ts",
+          "line": 95,
+          "column": 3
+        },
+        {
+          "title": "other custom failure retains reason",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 40000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 880,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T03:21:38.479Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "be1d78b10a5589d89716-e4d4635bfaf0040dfd41",
+          "file": "payroll-swap.spec.ts",
+          "line": 95,
+          "column": 3
+        },
+        {
+          "title": "string revert retains reason",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 40000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 920,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T03:21:39.380Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "be1d78b10a5589d89716-c0e016da41b37420009b",
+          "file": "payroll-swap.spec.ts",
+          "line": 95,
+          "column": 3
+        },
+        {
+          "title": "empty string revert still reports failure",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 40000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 846,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T03:21:40.320Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "be1d78b10a5589d89716-5e8b31725b2b79eae232",
+          "file": "payroll-swap.spec.ts",
+          "line": 95,
+          "column": 3
+        },
+        {
+          "title": "unknown revert retains selector",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 40000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 992,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T03:21:41.183Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "be1d78b10a5589d89716-f37dd940eb43d9fc57dd",
+          "file": "payroll-swap.spec.ts",
+          "line": 95,
+          "column": 3
+        },
+        {
+          "title": "zero output from Quoter cannot enable a swap",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 40000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 763,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T03:21:42.192Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "be1d78b10a5589d89716-1f4527f85cb0ed6d04b3",
+          "file": "payroll-swap.spec.ts",
+          "line": 120,
+          "column": 1
+        },
+        {
+          "title": "payroll reads distributor while disconnected, refreshes exactly and recovers after RPC failure",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 40000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2332,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-06T03:21:42.974Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "be1d78b10a5589d89716-73e95ef1916b8f90c942",
+          "file": "payroll-swap.spec.ts",
+          "line": 133,
+          "column": 1
+        }
+      ]
+    },
+    {
       "title": "terminal.spec.ts",
       "file": "terminal.spec.ts",
       "column": 0,
@@ -86,12 +434,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 716,
+                  "duration": 909,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-06T01:50:23.100Z",
+                  "startTime": "2026-10-06T03:21:45.446Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -120,12 +468,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 568,
+                  "duration": 1127,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-06T01:50:23.944Z",
+                  "startTime": "2026-10-06T03:21:46.378Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -154,12 +502,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 340,
+                  "duration": 545,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-06T01:50:24.528Z",
+                  "startTime": "2026-10-06T03:21:47.523Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -188,12 +536,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1934,
+                  "duration": 2268,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-06T01:50:24.882Z",
+                  "startTime": "2026-10-06T03:21:48.086Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -222,12 +570,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1209,
+                  "duration": 2289,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-06T01:50:26.826Z",
+                  "startTime": "2026-10-06T03:21:50.373Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -256,12 +604,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1672,
+                  "duration": 2784,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-06T01:50:28.044Z",
+                  "startTime": "2026-10-06T03:21:52.684Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -290,12 +638,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3227,
+                  "duration": 3597,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-06T01:50:29.727Z",
+                  "startTime": "2026-10-06T03:21:55.487Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -324,12 +672,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1226,
+                  "duration": 2194,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-06T01:50:32.963Z",
+                  "startTime": "2026-10-06T03:21:59.103Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -358,12 +706,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1660,
+                  "duration": 1919,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-06T01:50:34.198Z",
+                  "startTime": "2026-10-06T03:22:01.312Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -392,12 +740,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 297,
+                  "duration": 519,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-06T01:50:35.869Z",
+                  "startTime": "2026-10-06T03:22:03.247Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -406,40 +754,6 @@
             }
           ],
           "id": "8f9206fb64e745a9d86f-10618f0994e2a77d0d11",
-          "file": "terminal.spec.ts",
-          "line": 284,
-          "column": 3
-        },
-        {
-          "title": "noLiquidity blocks swapping and exposes recovery",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 40000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 404,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-06T01:50:36.177Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "8f9206fb64e745a9d86f-cfe059925f9e32a0be65",
           "file": "terminal.spec.ts",
           "line": 284,
           "column": 3
@@ -460,12 +774,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 366,
+                  "duration": 753,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-06T01:50:36.593Z",
+                  "startTime": "2026-10-06T03:22:03.782Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -475,7 +789,7 @@
           ],
           "id": "8f9206fb64e745a9d86f-c177838c1c8ff2cbcd30",
           "file": "terminal.spec.ts",
-          "line": 300,
+          "line": 295,
           "column": 1
         },
         {
@@ -494,12 +808,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 187,
+                  "duration": 352,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-06T01:50:36.968Z",
+                  "startTime": "2026-10-06T03:22:04.554Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -509,7 +823,7 @@
           ],
           "id": "8f9206fb64e745a9d86f-3b765e4cb7627f2b60a3",
           "file": "terminal.spec.ts",
-          "line": 305,
+          "line": 300,
           "column": 1
         },
         {
@@ -528,12 +842,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1523,
+                  "duration": 2747,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-06T01:50:37.166Z",
+                  "startTime": "2026-10-06T03:22:04.923Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -543,7 +857,7 @@
           ],
           "id": "8f9206fb64e745a9d86f-6a03c79e484a52711941",
           "file": "terminal.spec.ts",
-          "line": 317,
+          "line": 312,
           "column": 1
         },
         {
@@ -562,12 +876,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 359,
+                  "duration": 588,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-06T01:50:38.700Z",
+                  "startTime": "2026-10-06T03:22:07.688Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -577,7 +891,7 @@
           ],
           "id": "8f9206fb64e745a9d86f-8726a01a94f7398fcf05",
           "file": "terminal.spec.ts",
-          "line": 377,
+          "line": 372,
           "column": 1
         },
         {
@@ -596,12 +910,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 768,
+                  "duration": 1165,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-06T01:50:39.068Z",
+                  "startTime": "2026-10-06T03:22:08.293Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -611,7 +925,7 @@
           ],
           "id": "8f9206fb64e745a9d86f-94da5b2e7ae2f8847a19",
           "file": "terminal.spec.ts",
-          "line": 398,
+          "line": 393,
           "column": 1
         },
         {
@@ -630,12 +944,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8,
+                  "duration": 17,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-06T01:50:39.845Z",
+                  "startTime": "2026-10-06T03:22:09.473Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -645,7 +959,7 @@
           ],
           "id": "8f9206fb64e745a9d86f-5c2fe9414f7620c92378",
           "file": "terminal.spec.ts",
-          "line": 424,
+          "line": 419,
           "column": 1
         }
       ]
@@ -653,9 +967,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-06T01:50:21.783Z",
-    "duration": 18163.307,
-    "expected": 17,
+    "startTime": "2026-10-06T03:21:29.894Z",
+    "duration": 39775.504,
+    "expected": 26,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

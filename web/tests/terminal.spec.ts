@@ -280,7 +280,7 @@ test("contract tools: validate recipient, transfer, approve/revoke and transferF
   expect(s.sends[1].args[1]).toBe(0n);
   expect(s.sends[2].args).toEqual([other, account, parseUnits("2", 18)]);
 });
-for (const failure of ["failRpc", "noCode", "noLiquidity"] as const)
+for (const failure of ["failRpc", "noCode"] as const)
   test(`${failure} blocks swapping and exposes recovery`, async ({ page }) => {
     await setup(page, { [failure]: true });
     await page.goto("/");
@@ -288,14 +288,9 @@ for (const failure of ["failRpc", "noCode", "noLiquidity"] as const)
     await expect(
       page.getByRole("button", { name: "Get quote →" }),
     ).toBeDisabled();
-    if (failure === "noLiquidity")
-      await expect(
-        page.getByText("No active pool liquidity.", { exact: false }),
-      ).toBeVisible();
-    else
-      await expect(
-        page.getByRole("button", { name: "Retry live reads" }),
-      ).toBeVisible();
+    await expect(
+      page.getByRole("button", { name: "Retry live reads" }),
+    ).toBeVisible();
   });
 test("configured RPC fallback works", async ({ page }) => {
   await setup(page, { failFirstRpc: true });

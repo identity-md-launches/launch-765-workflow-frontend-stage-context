@@ -5,7 +5,7 @@ import {
   amount,
   display,
   encodeSwap,
-  errorText,
+  quoteErrorText,
   swapInput,
 } from "./chain";
 import { protocolAbi } from "./config";
@@ -106,7 +106,7 @@ export function Swap({
         setQuote({ n, out, minimum, expires: Date.now() + 30000, step });
     } catch (e) {
       if (generation.current === started) {
-        setError(errorText(e));
+        setError(quoteErrorText(e, sell));
         setInvalid(invalidField);
       }
     } finally {
@@ -323,13 +323,7 @@ export function Swap({
       ) : (
         <button
           className="primary full"
-          disabled={
-            !ready ||
-            !!busy ||
-            quoting ||
-            !supportedPair ||
-            state?.liquidity === 0n
-          }
+          disabled={!ready || !!busy || quoting || !supportedPair}
           onClick={getQuote}
         >
           {quoting ? "Simulating quote…" : "Get quote →"}
@@ -337,11 +331,6 @@ export function Swap({
       )}
       {!connectControl && !ready && (
         <p className="caption">Waiting for verified live contract state.</p>
-      )}
-      {state?.liquidity === 0n && (
-        <p className="warning">
-          No active pool liquidity. Swaps are unavailable.
-        </p>
       )}
       <p className="swap-footnote">
         Quotes use the launch pool. Every transaction is simulated before your

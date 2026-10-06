@@ -1,0 +1,45 @@
+
+> nodev-terminal@1.0.0 test
+> playwright test payroll-swap.spec.ts
+
+[WebServer] (node:41) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:70) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:82) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/payroll-swap.spec.ts:4:1 › zero active liquidity still permits a quoted buy and simulated swap (5.8s)
+
+
+  1) tests/payroll-swap.spec.ts:4:1 › zero active liquidity still permits a quoted buy and simulated swap 
+
+    Error: expect(locator).toBeEnabled() failed
+
+    Locator:  getByRole('button', { name: 'Get quote →' })
+    Expected: enabled
+    Received: disabled
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeEnabled" getByRole('button', { name: 'Get quote →' }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Get quote →' })
+        14 × locator resolved to <button disabled class="primary full">Get quote →</button>
+           - unexpected value "disabled"
+
+
+       7 |   await expect(page.getByText("RPC chain and contract code verified", { exact: false })).toBeVisible();
+       8 |   await page.getByRole("button", { name: "Connect wallet" }).first().click();
+    >  9 |   await expect(page.getByRole("button", { name: "Get quote →" })).toBeEnabled();
+         |                                                                   ^
+      10 |   await expect(page.getByText("No active pool liquidity.", { exact: false })).toHaveCount(0);
+      11 |   await page.getByLabel("You pay").fill("0.0001");
+      12 |   await page.getByRole("button", { name: "Get quote →" }).click();
+        at /tmp/nodev-check/web/tests/payroll-swap.spec.ts:9:67
+
+    Error Context: test-results/payroll-swap-zero-active-l-28ccc-oted-buy-and-simulated-swap/error-context.md
+
+  1 failed
+    tests/payroll-swap.spec.ts:4:1 › zero active liquidity still permits a quoted buy and simulated swap 

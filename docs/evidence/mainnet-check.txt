@@ -1,0 +1,16 @@
+
+> nodev-terminal@1.0.0 test
+> playwright test mainnet.spec.ts
+
+[WebServer] (node:52) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:81) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:93) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/mainnet.spec.ts:21:3 › mainnet: positive 0.0001 ETH buy and successful production router simulation (538ms)
+
+  1 passed (3.2s)

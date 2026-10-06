@@ -1,0 +1,57 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "overflow": false,
+  "pairs": [
+    {
+      "selector": ".payroll h2",
+      "foreground": "rgb(216, 235, 214)",
+      "background": "rgb(16, 26, 18)",
+      "contrast": 14.233163332272678,
+      "fontSize": "16px",
+      "lineHeight": "22.4px"
+    },
+    {
+      "selector": ".payroll dt",
+      "foreground": "rgb(157, 179, 158)",
+      "background": "rgb(16, 26, 18)",
+      "contrast": 7.955190614158397,
+      "fontSize": "14px",
+      "lineHeight": "normal"
+    },
+    {
+      "selector": ".payroll dd",
+      "foreground": "rgb(157, 251, 112)",
+      "background": "rgb(16, 26, 18)",
+      "contrast": 13.972104621850484,
+      "fontSize": "14px",
+      "lineHeight": "normal"
+    },
+    {
+      "selector": ".payroll .caption",
+      "foreground": "rgb(157, 179, 158)",
+      "background": "rgb(16, 26, 18)",
+      "contrast": 7.955190614158397,
+      "fontSize": "12px",
+      "lineHeight": "18px"
+    },
+    {
+      "selector": ".swap label",
+      "foreground": "rgb(157, 179, 158)",
+      "background": "rgb(8, 12, 9)",
+      "contrast": 8.787844730032226,
+      "fontSize": "12px",
+      "lineHeight": "18px"
+    },
+    {
+      "selector": ".swap .caption",
+      "foreground": "rgb(157, 179, 158)",
+      "background": "rgb(16, 26, 18)",
+      "contrast": 7.955190614158397,
+      "fontSize": "12px",
+      "lineHeight": "18px"
+    }
+  ]
+}
