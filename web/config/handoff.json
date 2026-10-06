@@ -1,0 +1,43 @@
+{
+  "chainId": 1,
+  "poolKey": {
+    "fee": 12500,
+    "hooks": "0x784ff9a3ac5d88a30bfff6f7f2a270161fbe6000",
+    "currency0": "0x0000000000000000000000000000000000000000",
+    "currency1": "0x0629c60759a8b876de2b4596b58284b36510013c",
+    "tickSpacing": 60
+  },
+  "repoUrl": "https://github.com/identity-md-launches/launch-761-workflow-contract-stage-context",
+  "version": 1,
+  "launchId": "003df701-9569-4a55-acf5-daee223ffdf1",
+  "manifest": {
+    "kind": "evm_project",
+    "pool": {
+      "fee": 3000,
+      "tickSpacing": 60,
+      "initialPrice": "79228162514264337593543950336",
+      "pairedCurrency": "0x0000000000000000000000000000000000000000"
+    },
+    "notes": "Token-only launch. LaunchToken has no constructor arguments or privileged roles. No application contracts or initialization calls are required. The factory supplies liquidity, distribution and the initialization-only pool guard. Policy and signed artifact linkage are handled by services.",
+    "token": {
+      "name": "Dev Is A Robot",
+      "symbol": "NODEV",
+      "contract": "LaunchToken",
+      "decimals": 18
+    },
+    "contracts": []
+  },
+  "contracts": [
+    {
+      "name": "LaunchToken",
+      "txHash": "0x08502e209be05fbc828c8c48a0561db31a2b7b756fd2d03f768d4292ebd4fb7f",
+      "abiHash": "38880b8e56d42ce900f744a7908c7139632a49f1c3f33385c64ceaed29d37bee",
+      "address": "0x0629c60759a8b876de2b4596b58284b36510013c",
+      "blockNumber": 26130075,
+      "creationCodeHash": "0dde3fc0937f9ec676c80e72acb4e653a48a66a6552d9476eb3f961db928dc55"
+    }
+  ],
+  "sourceCommit": "80d57910ec635cc8cf8017c9a6e4f8bbe553fd58",
+  "abiInstructions": "Build ABIs from this exact source commit; compare canonicalKeccak(abi) with abiHash. Verify deployed code on the stated chain before enabling transactions.",
+  "attestationHash": "d48563f70250da3562b303b6f142cd04180b03ed7b739ac4bbfd6cd12f831fb3"
+}

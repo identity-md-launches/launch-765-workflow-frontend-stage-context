@@ -1,0 +1,126 @@
+{
+  "checkedAt": "2026-10-06T01:49:22.234Z",
+  "mode": "read-only; no transactions broadcast",
+  "results": [
+    {
+      "url": "https://ethereum-rpc.publicnode.com",
+      "chainId": 1,
+      "blockNumber": "26130154",
+      "code": [
+        {
+          "address": "0x0629c60759a8b876de2b4596b58284b36510013c",
+          "codeBytes": 1784,
+          "codeHash": "0xc857e307f4fe157243ecff56a07bdba7b48178b1a01428ef2309e87e88cfc532"
+        },
+        {
+          "address": "0x000000000004444c5dc75cb358380d2e3de08a90",
+          "codeBytes": 24009,
+          "codeHash": "0x785f1014552b7ce7d5fb7d0c970ca60edee94fd00425d7ca21609acac7ce1293"
+        },
+        {
+          "address": "0x66a9893cc07d91d95644aedd05d03f95e1dba8af",
+          "codeBytes": 19499,
+          "codeHash": "0x6a5f46971b50c6e1b7eef97902311444e479d734e4f80ad88367783cf373fe7f"
+        },
+        {
+          "address": "0x52f0e24d1c21c8a0cb1e5a5dd6198556bd9e1203",
+          "codeBytes": 5820,
+          "codeHash": "0x06de58fa119c5deaa7a667fb92d3894e25d9160e62fb82c8d86d43b47eefe441"
+        },
+        {
+          "address": "0x7ffe42c4a5deea5b0fec41c94c136cf115597227",
+          "codeBytes": 3531,
+          "codeHash": "0xd7947778589cf4aac9a092a4451292a2056380941635ab7006d3c691d8dfd878"
+        },
+        {
+          "address": "0xbd216513d74c8cf14cf4747e6aaa6420ff64ee9e",
+          "codeBytes": 23877,
+          "codeHash": "0x77e36c08b19959a30dde46dec9abe6208e371ff2f56884a56fe1e1a53615528b"
+        },
+        {
+          "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+          "codeBytes": 9152,
+          "codeHash": "0xc67d1657868aa5146eaf24fb879fb1fdec3d2d493b3683a61c9c2f4fb2851131"
+        },
+        {
+          "address": "0x784ff9a3ac5d88a30bfff6f7f2a270161fbe6000",
+          "codeBytes": 488,
+          "codeHash": "0xc4e2c666a2d8e68014911fba68a4273670ba25cf9b126ce1698b270179f746b0"
+        }
+      ],
+      "name": "Dev Is A Robot",
+      "symbol": "NODEV",
+      "decimals": 18,
+      "totalSupply": "1000000000000000000000000000",
+      "poolId": "0x40c40b6f0388ab3ebac35050fd63106b695e9a197b37c7db1a28159f7ea81564",
+      "slot0": [
+        "792281625142643375935439503360000",
+        184216,
+        0,
+        12500
+      ],
+      "liquidity": "0",
+      "pass": true
+    },
+    {
+      "url": "https://eth.drpc.org",
+      "chainId": 1,
+      "blockNumber": "26130154",
+      "code": [
+        {
+          "address": "0x0629c60759a8b876de2b4596b58284b36510013c",
+          "codeBytes": 1784,
+          "codeHash": "0xc857e307f4fe157243ecff56a07bdba7b48178b1a01428ef2309e87e88cfc532"
+        },
+        {
+          "address": "0x000000000004444c5dc75cb358380d2e3de08a90",
+          "codeBytes": 24009,
+          "codeHash": "0x785f1014552b7ce7d5fb7d0c970ca60edee94fd00425d7ca21609acac7ce1293"
+        },
+        {
+          "address": "0x66a9893cc07d91d95644aedd05d03f95e1dba8af",
+          "codeBytes": 19499,
+          "codeHash": "0x6a5f46971b50c6e1b7eef97902311444e479d734e4f80ad88367783cf373fe7f"
+        },
+        {
+          "address": "0x52f0e24d1c21c8a0cb1e5a5dd6198556bd9e1203",
+          "codeBytes": 5820,
+          "codeHash": "0x06de58fa119c5deaa7a667fb92d3894e25d9160e62fb82c8d86d43b47eefe441"
+        },
+        {
+          "address": "0x7ffe42c4a5deea5b0fec41c94c136cf115597227",
+          "codeBytes": 3531,
+          "codeHash": "0xd7947778589cf4aac9a092a4451292a2056380941635ab7006d3c691d8dfd878"
+        },
+        {
+          "address": "0xbd216513d74c8cf14cf4747e6aaa6420ff64ee9e",
+          "codeBytes": 23877,
+          "codeHash": "0x77e36c08b19959a30dde46dec9abe6208e371ff2f56884a56fe1e1a53615528b"
+        },
+        {
+          "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+          "codeBytes": 9152,
+          "codeHash": "0xc67d1657868aa5146eaf24fb879fb1fdec3d2d493b3683a61c9c2f4fb2851131"
+        },
+        {
+          "address": "0x784ff9a3ac5d88a30bfff6f7f2a270161fbe6000",
+          "codeBytes": 488,
+          "codeHash": "0xc4e2c666a2d8e68014911fba68a4273670ba25cf9b126ce1698b270179f746b0"
+        }
+      ],
+      "name": "Dev Is A Robot",
+      "symbol": "NODEV",
+      "decimals": 18,
+      "totalSupply": "1000000000000000000000000000",
+      "poolId": "0x40c40b6f0388ab3ebac35050fd63106b695e9a197b37c7db1a28159f7ea81564",
+      "slot0": [
+        "792281625142643375935439503360000",
+        184216,
+        0,
+        12500
+      ],
+      "liquidity": "0",
+      "pass": true
+    }
+  ]
+}

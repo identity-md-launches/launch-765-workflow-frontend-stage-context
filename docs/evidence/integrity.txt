@@ -1,0 +1,5 @@
+
+> nodev-terminal@1.0.0 verify
+> node scripts/export.mjs --check
+
+Verified 6 assets, 560742 bytes; pinned ABI, handoff, network and SHA-256 inventory match.

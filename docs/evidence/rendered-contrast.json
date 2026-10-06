@@ -1,0 +1,58 @@
+[
+  {
+    "selector": ".hero h1",
+    "foreground": "rgb(216, 235, 214)",
+    "background": "rgb(8, 12, 9)",
+    "ratio": "15.72",
+    "fontSize": "32px"
+  },
+  {
+    "selector": ".intro",
+    "foreground": "rgb(157, 179, 158)",
+    "background": "rgb(8, 12, 9)",
+    "ratio": "8.79",
+    "fontSize": "14px"
+  },
+  {
+    "selector": ".caption",
+    "foreground": "rgb(157, 179, 158)",
+    "background": "rgb(8, 12, 9)",
+    "ratio": "8.79",
+    "fontSize": "12px"
+  },
+  {
+    "selector": ".swap-footnote",
+    "foreground": "rgb(157, 179, 158)",
+    "background": "rgb(16, 26, 18)",
+    "ratio": "7.96",
+    "fontSize": "11px"
+  },
+  {
+    "selector": ".primary",
+    "foreground": "rgb(8, 12, 9)",
+    "background": "rgb(157, 251, 112)",
+    "ratio": "15.43",
+    "fontSize": "12px"
+  },
+  {
+    "selector": ".danger",
+    "foreground": "rgb(255, 255, 255)",
+    "background": "rgb(182, 36, 32)",
+    "ratio": "6.44",
+    "fontSize": "18px"
+  },
+  {
+    "selector": ".warning",
+    "foreground": "rgb(231, 200, 125)",
+    "background": "rgb(8, 12, 9)",
+    "ratio": "12.14",
+    "fontSize": "11.2px"
+  },
+  {
+    "selector": "input",
+    "foreground": "rgb(216, 235, 214)",
+    "background": "rgb(8, 12, 9)",
+    "ratio": "15.72",
+    "fontSize": "32px"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "newDeliveryFileCount": 49,
+  "newDeliveryRawBytes": 1773519,
+  "entireTrackedAndProposedRawBytes": 2687901,
+  "deliveryBudgetWith1KiBPerFileOverhead": 2789277,
+  "limitBytes": 8388608,
+  "outOfScopePaths": [],
+  "dependencyCacheArchivePaths": [],
+  "submodules": 0,
+  "gitCommit": "blocked: repository .git is read-only",
+  "actualGitBundle": "not generated: partial-clone objects would need writes to protected .git"
+}
